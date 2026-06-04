@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-// No need to import 'path' for Vite aliasing
+
+const srcPath = new URL('./src', import.meta.url).pathname
 
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': '/src',
+      '@': srcPath,
     },
   },
 })
