@@ -123,7 +123,7 @@ export function RouteErrorBoundary({ children }: { children: ReactNode }) {
   return (
     <ErrorBoundary
       fallback={
-        <div className="flex min-h-screen items-center justify-center p-8">
+        <div className="flex min-h-screen items-start justify-center px-4 py-8 sm:items-center sm:py-0">
           <div className="max-w-md text-center">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-50">
               Page failed to load

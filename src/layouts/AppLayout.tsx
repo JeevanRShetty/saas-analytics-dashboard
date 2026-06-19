@@ -34,11 +34,11 @@ export function AppLayout() {
   return (
     <div
       className={cn(
-        'grid h-screen overflow-hidden bg-gray-50 dark:bg-gray-950',
-        'transition-[grid-template-columns] duration-200',
+        'flex min-h-screen flex-col bg-gray-50 dark:bg-gray-950',
+        'md:grid md:h-screen md:overflow-hidden md:transition-[grid-template-columns] md:duration-200',
         isSidebarCollapsed
-          ? '[grid-template-areas:"sidebar_header""sidebar_main"] [grid-template-columns:64px_1fr] [grid-template-rows:56px_1fr]'
-          : '[grid-template-areas:"sidebar_header""sidebar_main"] [grid-template-columns:240px_1fr] [grid-template-rows:56px_1fr]',
+          ? 'md:[grid-template-areas:"sidebar_header""sidebar_main"] md:[grid-template-columns:64px_1fr] md:[grid-template-rows:56px_1fr]'
+          : 'md:[grid-template-areas:"sidebar_header""sidebar_main"] md:[grid-template-columns:240px_1fr] md:[grid-template-rows:56px_1fr]',
       )}
     >
       {/* Sidebar — [grid-area:sidebar] */}
@@ -53,7 +53,7 @@ export function AppLayout() {
         id="main-content"
         tabIndex={-1}
       >
-        <div className="mx-auto max-w-7xl p-6">
+        <div className="mx-auto max-w-7xl p-4 sm:p-6">
           <Outlet />
         </div>
       </main>

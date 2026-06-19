@@ -29,7 +29,7 @@ export function DashboardPage() {
   return (
     <div className="space-y-6">
       {/* Page header */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-xl font-semibold text-gray-900 dark:text-gray-50">
             Dashboard
@@ -49,8 +49,8 @@ export function DashboardPage() {
       </ErrorBoundary>
 
       {/* Charts row */}
-      <div className="grid grid-cols-3 gap-4">
-        <div className="col-span-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <div className="lg:col-span-2">
           <ErrorBoundary>
             <EventsChart organizationId={orgId} />
           </ErrorBoundary>

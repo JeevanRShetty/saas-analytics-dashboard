@@ -84,7 +84,7 @@ export function OnboardingPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 dark:bg-gray-950">
+    <div className="flex min-h-screen items-start justify-center bg-gray-50 px-4 py-8 dark:bg-gray-950 sm:items-center sm:py-0">
       <div className="w-full max-w-lg">
         <div className="mb-8 flex justify-center">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600">
@@ -183,7 +183,7 @@ export function OnboardingPage() {
             />
           )}
 
-          <div className="mt-8 flex items-center justify-between gap-4">
+          <div className="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
             <button
               onClick={handleBack}
               disabled={step === 0}
