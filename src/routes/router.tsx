@@ -190,7 +190,7 @@ export const router = createBrowserRouter([
   {
     path: '/403',
     element: (
-      <div className="flex min-h-screen items-center justify-center">
+      <div className="flex min-h-screen items-start justify-center px-4 py-8 sm:items-center sm:py-0">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-50">403</h1>
           <p className="mt-2 text-gray-500">You don&apos;t have permission to view this page.</p>

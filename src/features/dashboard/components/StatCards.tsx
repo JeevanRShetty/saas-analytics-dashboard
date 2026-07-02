@@ -27,7 +27,7 @@ export function StatCards({ organizationId }: StatCardsProps) {
 
   if (isLoading && cards.length === 0) {
     return (
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {Array.from({ length: 4 }).map((_, i) => (
           <StatCardSkeleton key={i} />
         ))}
@@ -36,7 +36,7 @@ export function StatCards({ organizationId }: StatCardsProps) {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {cards.map((card) => (
         <StatCard key={card.label} card={card} isRefreshing={isLoading} />
       ))}

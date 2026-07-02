@@ -61,7 +61,7 @@ export function InsightsPanel({ organizationId, compact = false }: InsightsPanel
   return (
     <div className={cn('space-y-3', compact && 'rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900')}>
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-1.5">
           <Sparkles className="h-4 w-4 text-purple-500" aria-hidden="true" />
           <h2 className="text-sm font-semibold text-gray-900 dark:text-gray-50">
@@ -145,7 +145,7 @@ function InsightCard({ insight, onAcknowledge, compact }: InsightCardProps) {
 
         {/* Content */}
         <div className="min-w-0 flex-1">
-          <div className="flex items-start justify-between gap-2">
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-2">
             <p className="text-xs font-medium text-gray-900 dark:text-gray-50">
               {insight.title}
             </p>
@@ -162,7 +162,7 @@ function InsightCard({ insight, onAcknowledge, compact }: InsightCardProps) {
             </p>
           )}
 
-          <div className="mt-2 flex items-center justify-between gap-2">
+          <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-2">
             <time className="text-[10px] text-gray-400" dateTime={insight.created_at}>
               {formatRelativeTime(insight.created_at)}
             </time>

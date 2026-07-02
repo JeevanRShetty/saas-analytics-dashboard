@@ -42,8 +42,8 @@ export function Skeleton({ className }: SkeletonProps) {
 
 export function StatCardSkeleton() {
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900">
-      <div className="flex items-center justify-between">
+    <div className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900 sm:p-6">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <Skeleton className="h-4 w-24" />
         <Skeleton className="h-8 w-8 rounded-lg" />
       </div>
@@ -58,10 +58,10 @@ export function StatCardSkeleton() {
 export function ChartSkeleton({ height = 300 }: { height?: number }) {
   return (
     <div
-      className="w-full rounded-xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900"
+      className="w-full rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900 sm:p-6"
       style={{ height }}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <Skeleton className="h-5 w-36" />
         <Skeleton className="h-8 w-24 rounded-lg" />
       </div>
@@ -84,7 +84,7 @@ export function TableSkeleton({ rows = 8, columns = 5 }: { rows?: number; column
   return (
     <div className="rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
       {/* Header */}
-      <div className="flex items-center gap-4 border-b border-gray-200 px-6 py-4 dark:border-gray-800">
+      <div className="flex flex-col gap-3 border-b border-gray-200 px-4 py-4 dark:border-gray-800 sm:flex-row sm:items-center sm:gap-4 sm:px-6">
         {Array.from({ length: columns }).map((_, i) => (
           <Skeleton key={i} className="h-4 flex-1" />
         ))}
@@ -93,7 +93,7 @@ export function TableSkeleton({ rows = 8, columns = 5 }: { rows?: number; column
       {Array.from({ length: rows }).map((_, rowIdx) => (
         <div
           key={rowIdx}
-          className="flex items-center gap-4 border-b border-gray-100 px-6 py-4 last:border-0 dark:border-gray-800"
+          className="flex flex-col gap-3 border-b border-gray-100 px-4 py-4 last:border-0 dark:border-gray-800 sm:flex-row sm:items-center sm:gap-4 sm:px-6"
         >
           {Array.from({ length: columns }).map((_, colIdx) => (
             <Skeleton
@@ -131,16 +131,16 @@ export function InsightCardSkeleton() {
 export function AppShellSkeleton({ minimal = false }: { minimal?: boolean }) {
   if (minimal) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-950">
+      <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 dark:bg-gray-950">
         <div className="h-8 w-8 animate-spin rounded-full border-2 border-blue-600 border-t-transparent" />
       </div>
     )
   }
 
   return (
-    <div className="flex h-screen bg-gray-50 dark:bg-gray-950">
+    <div className="flex min-h-screen flex-col bg-gray-50 dark:bg-gray-950 md:h-screen md:flex-row">
       {/* Sidebar skeleton */}
-      <div className="flex w-64 flex-col border-r border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900">
+      <div className="flex w-full flex-col border-b border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-gray-900 md:w-64 md:border-b-0 md:border-r">
         <Skeleton className="h-8 w-32" />
         <div className="mt-8 space-y-2">
           {Array.from({ length: 6 }).map((_, i) => (
@@ -149,9 +149,9 @@ export function AppShellSkeleton({ minimal = false }: { minimal?: boolean }) {
         </div>
       </div>
       {/* Main content skeleton */}
-      <div className="flex-1 p-8">
+      <div className="flex-1 p-4 sm:p-8">
         <Skeleton className="h-8 w-48" />
-        <div className="mt-6 grid grid-cols-4 gap-4">
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {Array.from({ length: 4 }).map((_, i) => (
             <StatCardSkeleton key={i} />
           ))}

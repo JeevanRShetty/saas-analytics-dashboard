@@ -115,7 +115,7 @@ export function AuditLogsPage() {
       </div>
 
       {/* Search */}
-      <div className="relative max-w-sm">
+      <div className="relative w-full max-w-sm">
         <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-gray-400" aria-hidden="true" />
         <input
           type="search"
@@ -187,7 +187,7 @@ export function AuditLogsPage() {
         )}
 
         {/* Pagination */}
-        <div className="flex items-center justify-between border-t border-gray-200 px-5 py-3 dark:border-gray-800">
+        <div className="flex flex-col gap-3 border-t border-gray-200 px-5 py-3 dark:border-gray-800 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-gray-400">
             {data
               ? `Showing ${page * pageSize + 1}–${Math.min((page + 1) * pageSize, data.total)} of ${data.total.toLocaleString()}`

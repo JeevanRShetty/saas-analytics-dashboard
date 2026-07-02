@@ -46,7 +46,7 @@ export function EventsChart({ organizationId }: EventsChartProps) {
 
   return (
     <div className="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900">
-      <div className="mb-4 flex items-center justify-between">
+      <div className="mb-4 flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
         <h2 className="text-sm font-semibold text-gray-900 dark:text-gray-50">
           Events over time
         </h2>

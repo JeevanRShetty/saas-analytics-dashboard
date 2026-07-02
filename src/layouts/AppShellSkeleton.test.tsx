@@ -8,7 +8,7 @@ describe('AppShellSkeleton', () => {
     const { container } = render(<AppShellSkeleton />)
 
     expect(container.querySelectorAll('.animate-pulse').length).toBeGreaterThan(0)
-    expect(container.querySelector('.flex.w-64.flex-col')).toBeTruthy()
+    expect(container.querySelector('.flex.w-full.flex-col')).toBeTruthy()
   })
 
   it('renders the minimal loader variant', () => {

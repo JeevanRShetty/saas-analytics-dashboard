@@ -87,7 +87,7 @@ export function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 dark:bg-gray-950">
+    <div className="flex min-h-screen items-start justify-center bg-gray-50 px-4 py-8 dark:bg-gray-950 sm:items-center sm:py-0">
       <div className="w-full max-w-md space-y-8">
         {/* Logo / Brand */}
         <div className="text-center">
@@ -154,7 +154,7 @@ export function LoginPage() {
 
           {/* Password field */}
           <div className="space-y-1.5">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
               <label
                 htmlFor="password"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300"

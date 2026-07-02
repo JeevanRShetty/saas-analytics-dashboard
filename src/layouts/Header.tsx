@@ -38,8 +38,8 @@ export function Header() {
     <header
       className={cn(
         '[grid-area:header]',
-        'flex h-14 shrink-0 items-center justify-between gap-4',
-        'border-b border-gray-200 bg-white px-6 dark:border-gray-800 dark:bg-gray-900',
+        'flex flex-col gap-3 border-b border-gray-200 bg-white px-4 py-3 dark:border-gray-800 dark:bg-gray-900',
+        'sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-6 sm:py-0 sm:h-14',
       )}
     >
       {/* Search — opens command palette */}
@@ -50,7 +50,7 @@ export function Header() {
           'px-3 py-1.5 text-sm text-gray-400 transition-colors',
           'hover:border-gray-300 hover:text-gray-600',
           'dark:border-gray-700 dark:bg-gray-800 dark:hover:border-gray-600',
-          'w-56',
+          'w-full sm:w-56',
         )}
         aria-label="Open search"
       >
@@ -62,7 +62,7 @@ export function Header() {
       </button>
 
       {/* Right controls */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center justify-end gap-1 self-end sm:self-auto">
         {/* Theme toggle */}
         <button
           onClick={cycleTheme}

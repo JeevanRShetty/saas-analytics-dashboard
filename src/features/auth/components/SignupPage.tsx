@@ -26,7 +26,7 @@ export function SignupPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 dark:bg-gray-950">
+    <div className="flex min-h-screen items-start justify-center bg-gray-50 px-4 py-8 dark:bg-gray-950 sm:items-center sm:py-0">
       <div className="w-full max-w-md space-y-8">
         <div className="text-center">
           <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600">
